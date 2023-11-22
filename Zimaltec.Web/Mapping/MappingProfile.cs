@@ -9,6 +9,7 @@ namespace Zimaltec.Web.Mapping
         public MappingProfile()
         {
             CreateMap<ZimaltecTask, InsertZimaltecTaskDTO>().ReverseMap();
+            CreateMap<ZimaltecTask, UpdateZimaltecTaskDTO>().ReverseMap();
         }
     }
 }

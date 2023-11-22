@@ -27,8 +27,8 @@ namespace Zimaltec.Web
                     policy.Expire(TimeSpan.FromMinutes(10)));
 
                 // Custome caching policy
-                options.AddPolicy("1SecondsCache", policy => 
-                    policy.Expire(TimeSpan.FromSeconds(1)));
+                options.AddPolicy("10SecondsCache", policy => 
+                    policy.Expire(TimeSpan.FromSeconds(10)));
             });
 
             services.AddAutoMapper(typeof(Program));
