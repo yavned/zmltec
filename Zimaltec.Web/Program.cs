@@ -12,6 +12,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseOutputCache();
+
 app.UseHttpsRedirection();
 
 app.AddAppEndpoints();

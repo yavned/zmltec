@@ -17,7 +17,8 @@ namespace Zimaltec.Web
         /// <param name="app"><see cref="IEndpointRouteBuilder"/></param>
         public static void AddAppEndpoints(this IEndpointRouteBuilder app)
         {
-            app.MapGet("/tasks", async (ZimaltecDbContext db) => await db.ZimaltecTasks.ToListAsync());
+            app.MapGet("/tasks", async (ZimaltecDbContext db) => await db.ZimaltecTasks.ToListAsync())
+                .CacheOutput();
 
             app.MapPost("/task", async (IMapper _mapper, InsertZimaltecTaskDTO tsk, ZimaltecDbContext db) =>
             {
