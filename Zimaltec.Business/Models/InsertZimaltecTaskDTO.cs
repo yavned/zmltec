@@ -1,6 +1,6 @@
 ﻿namespace Zimaltec.Business.Models
 {
-    public class ZimaltecTaskDTO
+    public class InsertZimaltecTaskDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
